@@ -6,7 +6,7 @@ protocol MoviesPresenterProtocol: AnyObject{
 }
 
 final class MoviesPresenter: MoviesPresenterProtocol {
-    weak var view: MoviesPresenterProtocol?
+    weak var view: MoviesPresenterDelegate?
     
     func present(with moviesResponse: MoviesResponse) {
     }

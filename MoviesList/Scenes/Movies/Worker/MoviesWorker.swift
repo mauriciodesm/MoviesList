@@ -9,7 +9,8 @@ protocol MoviesWorkerProtocol {
 final class MoviesWorker: MoviesWorkerProtocol {
     func fetchHeroes() -> PromiseKit.Promise<MoviesResponse> {
         let apiKey = "8b07b22776f9a0f7a0f3b7d5299d9db7"
-        let parameters: [String: Any] = ["api_key": apiKey]
+        let parameters: [String: Any] = ["api_key": apiKey,
+                                         "language": "pt-BR"]
         return Promise<MoviesResponse> { seal in
             AF.request("https://api.themoviedb.org/3/trending/movie/week",
                         method: .get,

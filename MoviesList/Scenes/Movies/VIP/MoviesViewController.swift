@@ -1,13 +1,14 @@
 import Foundation
 import UIKit
 
-protocol MoviesPresenterDelegate: AnyObject{
-    func render()
+protocol MoviesPresenterDelegate: AnyObject {
+    func render(viewData: MoviesViewData)
 }
 
 final class MoviesViewController: UIViewController {
     var customView: MoviesCustomViewProtocol
     var interactor: MoviesInteractorProtocol
+    var viewData: MoviesViewData?
     
     init(customView: MoviesCustomViewProtocol,
          interactor: MoviesInteractorProtocol) {
@@ -25,6 +26,7 @@ final class MoviesViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        self.view?.backgroundColor = UIColor(hex: "#1E1E1E")
         interactor.viewDidLoad()
     }
     
@@ -32,6 +34,6 @@ final class MoviesViewController: UIViewController {
 }
     
 extension MoviesViewController: MoviesPresenterDelegate {
-    func render() {
+    func render(viewData: MoviesViewData) {
     }
 }
