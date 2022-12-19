@@ -2,12 +2,13 @@ import Foundation
 
 protocol MoviesInteractorProtocol: AnyObject{
     func viewDidLoad()
+    func didSelect(at index: Int)
 }
 
 final class MoviesInteractor: MoviesInteractorProtocol{
     var dataStore: MoviesDataStoreProtocol
     var presenter: MoviesPresenterProtocol
-    var router: MoviesRouter
+    var router: MoviesRouterProtocol
     var worker: MoviesWorkerProtocol
     
     init(dataStore: MoviesDataStoreProtocol,
@@ -21,7 +22,7 @@ final class MoviesInteractor: MoviesInteractorProtocol{
     }
     
     func viewDidLoad() {
-        worker.fetchHeroes().done { [weak self] moviesResponse in
+        worker.fetchMovies().done { [weak self] moviesResponse in
             self?.dataStore.moviesResponse = moviesResponse
             self?.presenter.present(with: moviesResponse)
         }.catch { error in
@@ -29,4 +30,8 @@ final class MoviesInteractor: MoviesInteractorProtocol{
         }
     }
     
+    func didSelect(at index: Int) {
+        guard let movie = self.dataStore.moviesResponse?.data.results[index] else { return }
+        router.goToDetailScreen(with: movie)
+    }
 }

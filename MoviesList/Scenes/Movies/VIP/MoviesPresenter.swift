@@ -17,7 +17,7 @@ final class MoviesPresenter: MoviesPresenterProtocol {
     
     private func moviesViewData(from results: [MoviesResponse.Result]) -> [MoviesViewData.MovieViewData] {
         results.compactMap { result in
-            let imageURL = result.posterPath
+            let imageURL = result.posterPath 
             return MoviesViewData.MovieViewData(title: result.title, posterPath: imageURL, releaseDate: result.releaseDate)
         }
     }

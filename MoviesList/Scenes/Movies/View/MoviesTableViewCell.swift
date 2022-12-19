@@ -1,5 +1,6 @@
 import UIKit
 import SnapKit
+import Kingfisher
 
 class MoviesTableViewCell: UITableViewCell {
     private var stackView: UIStackView = {
@@ -10,8 +11,8 @@ class MoviesTableViewCell: UITableViewCell {
         return stack
     }()
     
-    private var moviePoster: UIView = {
-        let view = UIView()
+    private var moviePoster: UIImageView = {
+        let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.frame = CGRect(x: 1,
                              y: 1,
@@ -98,4 +99,18 @@ class MoviesTableViewCell: UITableViewCell {
         titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
     }
     
+    func render(viewData: MoviesViewData.MovieViewData) {
+        titleLabel.text = viewData.title
+        releaseDateLabel.text = "Lançamento: \(viewData.releaseDate.formatDate())"
+        let baseURL = "https://image.tmdb.org/t/p/w500"
+        let urlString = baseURL + viewData.posterPath
+        renderThumbImage(for: urlString)
+    }
+    
+    private func renderThumbImage(for urlString: String) {
+        let url = URL(string: urlString)
+        moviePoster.kf.indicatorType = .activity
+        moviePoster.kf.setImage(with: url)
+        moviePoster.contentMode = .scaleAspectFit
+    }
 }

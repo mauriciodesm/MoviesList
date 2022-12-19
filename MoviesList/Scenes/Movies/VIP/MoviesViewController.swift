@@ -26,7 +26,8 @@ final class MoviesViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        self.view?.backgroundColor = UIColor(hex: "#1E1E1E")
+        super.viewDidLoad()
+        view.setBackground()
         interactor.viewDidLoad()
     }
     
@@ -35,5 +36,28 @@ final class MoviesViewController: UIViewController {
     
 extension MoviesViewController: MoviesPresenterDelegate {
     func render(viewData: MoviesViewData) {
+        self.viewData = viewData
+        customView.reloadData()
+    }
+}
+
+extension MoviesViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let movieViewData = self.viewData?.movies[indexPath.row],
+              let cell = tableView.dequeue(cell: MoviesTableViewCell.self) else {
+            return UITableViewCell()
+        }
+        cell.render(viewData: movieViewData)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.viewData?.movies.count ?? 0
+    }
+}
+
+extension MoviesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        interactor.didSelect(at: indexPath.row)
     }
 }

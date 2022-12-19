@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "581B3AA7-F1CA-44D9-AAC6-96A07E8E2774"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4DE41927-6712-4B49-835B-39FC963B102E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesList/Scenes/Movies/VIP/MoviesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CE42BFE3-3E31-491D-A944-84E661046C43"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesList/Scenes/Movies/VIP/MoviesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "loadView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A21222D-6EEB-40F6-AC92-B03654E9D32D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesList/Scenes/Movies/VIP/MoviesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EEB33D51-00F9-4B4A-B551-5DFCA6B788F3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesList/Scenes/Movies/Worker/MoviesWorker.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "fetchMovies()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EEB33D51-00F9-4B4A-B551-5DFCA6B788F3 - 7456d5caae9a70d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in closure #1 (PromiseKit.Resolver&lt;MoviesList.MoviesResponse&gt;) -&gt; () in MoviesList.MoviesWorker.fetchMovies() -&gt; PromiseKit.Promise&lt;MoviesList.MoviesResponse&gt;"
+                  moduleName = "MoviesList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mauricio/Git/MoviesList/MoviesList/Scenes/Movies/Worker/MoviesWorker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "408">
+               </Location>
+               <Location
+                  uuid = "EEB33D51-00F9-4B4A-B551-5DFCA6B788F3 - 7456d5caae9a70d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in closure #1 (PromiseKit.Resolver&lt;MoviesList.MoviesResponse&gt;) -&gt; () in MoviesList.MoviesWorker.fetchMovies() -&gt; PromiseKit.Promise&lt;MoviesList.MoviesResponse&gt;"
+                  moduleName = "MoviesList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mauricio/Git/MoviesList/MoviesList/Scenes/Movies/Worker/MoviesWorker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "556">
+               </Location>
+               <Location
+                  uuid = "EEB33D51-00F9-4B4A-B551-5DFCA6B788F3 - 7456d5caae9a70d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in closure #1 (PromiseKit.Resolver&lt;MoviesList.MoviesResponse&gt;) -&gt; () in MoviesList.MoviesWorker.fetchMovies() -&gt; PromiseKit.Promise&lt;MoviesList.MoviesResponse&gt;"
+                  moduleName = "MoviesList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mauricio/Git/MoviesList/MoviesList/Scenes/Movies/Worker/MoviesWorker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "648">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09521A6D-69C4-45F7-9D2A-82A44D9917E6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesList/Scenes/Movies/Worker/MoviesWorker.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "fetchMovies()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "57DBD1E6-F425-453C-8BAC-1E7EA216F299"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesList/Scenes/Movies/Worker/MoviesWorker.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "fetchMovies()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "57DBD1E6-F425-453C-8BAC-1E7EA216F299 - 7456d5caae9a70f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in closure #1 (PromiseKit.Resolver&lt;MoviesList.MoviesResponse&gt;) -&gt; () in MoviesList.MoviesWorker.fetchMovies() -&gt; PromiseKit.Promise&lt;MoviesList.MoviesResponse&gt;"
+                  moduleName = "MoviesList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mauricio/Git/MoviesList/MoviesList/Scenes/Movies/Worker/MoviesWorker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "324">
+               </Location>
+               <Location
+                  uuid = "57DBD1E6-F425-453C-8BAC-1E7EA216F299 - 7456d5caae9a70f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in closure #1 (PromiseKit.Resolver&lt;MoviesList.MoviesResponse&gt;) -&gt; () in MoviesList.MoviesWorker.fetchMovies() -&gt; PromiseKit.Promise&lt;MoviesList.MoviesResponse&gt;"
+                  moduleName = "MoviesList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mauricio/Git/MoviesList/MoviesList/Scenes/Movies/Worker/MoviesWorker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "372">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BCB1B99B-7EC8-4CCC-8367-7805E1A35809"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesList/Scenes/Movies/VIP/MoviesInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BCB1B99B-7EC8-4CCC-8367-7805E1A35809 - 1e504fdf959d38d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoviesList.MoviesInteractor.viewDidLoad() -&gt; ()"
+                  moduleName = "MoviesList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mauricio/Git/MoviesList/MoviesList/Scenes/Movies/VIP/MoviesInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "BCB1B99B-7EC8-4CCC-8367-7805E1A35809 - 88fbabea30ddddf6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MoviesList.MoviesResponse) -&gt; () in MoviesList.MoviesInteractor.viewDidLoad() -&gt; ()"
+                  moduleName = "MoviesList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mauricio/Git/MoviesList/MoviesList/Scenes/Movies/VIP/MoviesInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "98F6A06A-2EF7-43DE-BDFD-2760C90B0A6F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesList/Scenes/Movies/VIP/MoviesInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "98F6A06A-2EF7-43DE-BDFD-2760C90B0A6F - 1e504fdf959d38b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoviesList.MoviesInteractor.viewDidLoad() -&gt; ()"
+                  moduleName = "MoviesList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mauricio/Git/MoviesList/MoviesList/Scenes/Movies/VIP/MoviesInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "564">
+               </Location>
+               <Location
+                  uuid = "98F6A06A-2EF7-43DE-BDFD-2760C90B0A6F - 88fbabea30dddd91"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MoviesList.MoviesResponse) -&gt; () in MoviesList.MoviesInteractor.viewDidLoad() -&gt; ()"
+                  moduleName = "MoviesList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mauricio/Git/MoviesList/MoviesList/Scenes/Movies/VIP/MoviesInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  uuid = "98F6A06A-2EF7-43DE-BDFD-2760C90B0A6F - e0370d43e4a63289"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Error) -&gt; () in MoviesList.MoviesInteractor.viewDidLoad() -&gt; ()"
+                  moduleName = "MoviesList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mauricio/Git/MoviesList/MoviesList/Scenes/Movies/VIP/MoviesInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

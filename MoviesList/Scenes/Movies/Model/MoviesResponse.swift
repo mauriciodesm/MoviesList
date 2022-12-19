@@ -1,21 +1,27 @@
 import Foundation
 
 struct MoviesResponse: Codable {
-    
     struct DataClass: Codable {
-        let results: [Result]
+    let results: [Result]
     }
+    
     struct Result: Codable {
-        let backdropPath: String
+        let id: Int
         let title: String
-        let originalTitle, overview, posterPath: String
-        let popularity: Double
         let releaseDate: String
+        let posterPath: String
+        let overview: String
         let voteAverage: Double
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case releaseDate = "release_date"
+        case posterPath = "poster_path"
+        case overview
+        case voteAverage = "vote_average"
     }
-
+}
+    
     let data: DataClass
 }
-
-
-
