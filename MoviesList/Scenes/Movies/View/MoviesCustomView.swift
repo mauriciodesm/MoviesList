@@ -21,7 +21,7 @@ final class MoviesCustomView: UIView, MoviesCustomViewProtocol {
     
     private var tableView: UITableView = {
         let tableView = UITableView(frame:  .zero)
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         tableView.register(MoviesTableViewCell.self)
@@ -50,12 +50,11 @@ final class MoviesCustomView: UIView, MoviesCustomViewProtocol {
         }
         
         tableView.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(32)
+            make.top.equalTo(titleLabel.snp.bottom).offset(42)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
         }
-        
     }
     
     func setupDelegate(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {

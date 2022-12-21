@@ -29,9 +29,7 @@ final class MoviesViewController: UIViewController {
         super.viewDidLoad()
         view.setBackground()
         interactor.viewDidLoad()
-    }
-    
-    
+    }    
 }
     
 extension MoviesViewController: MoviesPresenterDelegate {

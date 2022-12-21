@@ -9,7 +9,7 @@ final class MoviesRouter: MoviesRouterProtocol{
     weak var navigationController: UINavigationController?
     
     func goToDetailScreen(with movie: MoviesResponse.Result) {
-        let viewController = MovieDetalFactory.viewController(movie: movie)
+        let viewController = MovieDetailFactory.viewController(movie: movie)
         navigationController?.pushViewController(viewController, animated: true)
     }
    

@@ -87,11 +87,11 @@ class MoviesTableViewCell: UITableViewCell {
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.leading.trailing.top.equalToSuperview()
+            make.leading.top.equalToSuperview()
         }
         
         releaseDateLabel.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview()
+            make.leading.equalToSuperview()
         }
     }
     
@@ -102,7 +102,7 @@ class MoviesTableViewCell: UITableViewCell {
     func render(viewData: MoviesViewData.MovieViewData) {
         titleLabel.text = viewData.title
         releaseDateLabel.text = "Lançamento: \(viewData.releaseDate.formatDate())"
-        let baseURL = "https://image.tmdb.org/t/p/w500"
+        let baseURL = "https://image.tmdb.org/t/p/w500/"
         let urlString = baseURL + viewData.posterPath
         renderThumbImage(for: urlString)
     }
