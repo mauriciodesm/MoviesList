@@ -39,8 +39,9 @@ final class MoviesCustomView: UIView, MoviesCustomViewProtocol {
     }
     
     private func setUpView() {
-        self.addSubview(titleLabel)
-        self.addSubview(tableView)
+        backgroundColor = .lightBackground
+        addSubview(titleLabel)
+        addSubview(tableView)
     }
     
     private func setUpConstraints(){
@@ -50,7 +51,7 @@ final class MoviesCustomView: UIView, MoviesCustomViewProtocol {
         }
         
         tableView.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(42)
+            make.top.equalTo(titleLabel.snp.bottom).offset(32)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.bottom.equalToSuperview()

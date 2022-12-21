@@ -1,9 +1,7 @@
 import Foundation
 
 struct MoviesResponse: Codable {
-    struct DataClass: Codable {
     let results: [Result]
-    }
     
     struct Result: Codable {
         let id: Int
@@ -21,7 +19,5 @@ struct MoviesResponse: Codable {
         case overview
         case voteAverage = "vote_average"
     }
-}
-    
-    let data: DataClass
+  }
 }

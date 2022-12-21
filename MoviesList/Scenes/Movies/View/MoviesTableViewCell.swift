@@ -3,43 +3,24 @@ import SnapKit
 import Kingfisher
 
 class MoviesTableViewCell: UITableViewCell {
-    private var stackView: UIStackView = {
-       let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .horizontal
-        stack.spacing = 16
-        return stack
-    }()
-    
-    private var moviePoster: UIImageView = {
+    private lazy var moviePoster: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.frame = CGRect(x: 1,
-                             y: 1,
-                             width: 90,
-                             height: 120)
         view.layer.cornerRadius = 18
+        view.layer.masksToBounds = true
         return view
     }()
     
-    private var secondaryStackView: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.alignment = .leading
-        stack.spacing = 8
-        return stack
-    }()
-    
-    private var titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor(hex: "FFFFFF")
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         return label
     }()
     
-    private var releaseDateLabel: UILabel = {
+    private lazy var releaseDateLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor(hex: "FFFFFF")?
@@ -48,12 +29,37 @@ class MoviesTableViewCell: UITableViewCell {
                                          weight: .regular)
         return label
     }()
+    
+    private lazy var stackView: UIStackView = {
+       let stack = UIStackView()
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.axis = .horizontal
+        [moviePoster, secondaryStackView].forEach { view in
+            stack.addArrangedSubview(view)
+        }
+        stack.distribution = .fillProportionally
+        stack.alignment = .center
+        stack.spacing = 16
+        return stack
+    }()
+    
+    private lazy var secondaryStackView: UIStackView = {
+        let stack = UIStackView()
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.axis = .vertical
+        [titleLabel, releaseDateLabel].forEach { view in
+            stack.addArrangedSubview(view)
+        }
+        stack.distribution = .fillProportionally
+        stack.spacing = 8
+        return stack
+    }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.setUpView()
         self.setUpConstraints()
-        self.applyAdditionalChanges()
+   //     self.applyAdditionalChanges()
     }
     
     required init?(coder: NSCoder) {
@@ -62,43 +68,27 @@ class MoviesTableViewCell: UITableViewCell {
     
     private func setUpView(){
         contentView.addSubview(stackView)
-        stackView.addArrangedSubview(moviePoster)
-        stackView.addArrangedSubview(secondaryStackView)
-        secondaryStackView.addArrangedSubview(titleLabel)
-        secondaryStackView.addArrangedSubview(releaseDateLabel)
+        backgroundColor = .clear
     }
     
     private func setUpConstraints() {
         stackView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(8)
-            make.bottom.equalToSuperview().inset(8)
-            make.leading.equalToSuperview().offset(30)
-            make.trailing.equalToSuperview().inset(80)
+            make.top.equalToSuperview().offset(16)
+            make.bottom.equalToSuperview().inset(16)
+            make.leading.equalToSuperview().offset(24)
+            make.trailing.equalToSuperview().inset(24)
         }
         
         moviePoster.snp.makeConstraints { make in
-            make.top.bottom.leading.equalToSuperview()
-            make.trailing.equalTo(stackView.snp.leading).offset(90)
-        }
-        
-        secondaryStackView.snp.makeConstraints { make in
-            make.centerY.equalTo(self.contentView)
-            make.trailing.equalTo(self.stackView.snp.trailing)
-        }
-        
-        titleLabel.snp.makeConstraints { make in
-            make.leading.top.equalToSuperview()
-        }
-        
-        releaseDateLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview()
+            make.height.equalTo(90)
+            make.width.equalTo(120)
         }
     }
     
-    private func applyAdditionalChanges() {
+  /*  private func applyAdditionalChanges() {
         titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
     }
-    
+  */
     func render(viewData: MoviesViewData.MovieViewData) {
         titleLabel.text = viewData.title
         releaseDateLabel.text = "Lançamento: \(viewData.releaseDate.formatDate())"

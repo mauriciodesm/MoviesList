@@ -31,7 +31,8 @@ final class MoviesInteractor: MoviesInteractorProtocol{
     }
     
     func didSelect(at index: Int) {
-        guard let movie = self.dataStore.moviesResponse?.data.results[index] else { return }
+        guard let movie = self.dataStore.moviesResponse?.results[index] else {
+            return }
         router.goToDetailScreen(with: movie)
     }
 }

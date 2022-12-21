@@ -13,7 +13,9 @@ final class MoviesFactory {
         let view = MoviesCustomView()
         let viewController = MoviesViewController(customView: view, interactor: interactor)
         let navigationController = UINavigationController(rootViewController: viewController)
+        view.setupDelegate(delegate: viewController, dataSource: viewController)
         presenter.view = viewController
+        router.navigationController = navigationController
         return navigationController
     }
 }
