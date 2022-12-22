@@ -7,8 +7,6 @@ protocol MoviesCustomViewProtocol where Self: UIView{
 }
 
 final class MoviesCustomView: UIView, MoviesCustomViewProtocol {
-  
-    
     private var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Filmes Populares"
@@ -17,7 +15,6 @@ final class MoviesCustomView: UIView, MoviesCustomViewProtocol {
         label.textAlignment = .center
         return label
     }()
-    
     
     private var tableView: UITableView = {
         let tableView = UITableView(frame:  .zero)
