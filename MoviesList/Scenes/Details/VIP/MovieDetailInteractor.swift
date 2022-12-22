@@ -5,12 +5,16 @@ protocol MovieDetailInteractorProtocol: AnyObject {
 }
 
 final class MovieDetailInteractor: MovieDetailInteractorProtocol {
-    var dataStore: MovieDetailDataStoreProtocol
+    var dataStore: MovieDetailDataStore
+    var presenter: MovieDetailPresenterProtocol
     
-    init(dataStore: MovieDetailDataStoreProtocol){
+    init(dataStore: MovieDetailDataStore,
+         presenter: MovieDetailPresenterProtocol) {
         self.dataStore = dataStore
+        self.presenter = presenter
     }
     
     func viewDidLoad() {
+        self.presenter.present(with: self.dataStore)
     }
 }

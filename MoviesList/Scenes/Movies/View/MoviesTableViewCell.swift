@@ -6,8 +6,8 @@ class MoviesTableViewCell: UITableViewCell {
     private lazy var moviePoster: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 18
         view.layer.masksToBounds = true
+        view.clipsToBounds = true
         return view
     }()
     
@@ -59,7 +59,6 @@ class MoviesTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.setUpView()
         self.setUpConstraints()
-   //     self.applyAdditionalChanges()
     }
     
     required init?(coder: NSCoder) {
@@ -85,10 +84,6 @@ class MoviesTableViewCell: UITableViewCell {
         }
     }
     
-  /*  private func applyAdditionalChanges() {
-        titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
-    }
-  */
     func render(viewData: MoviesViewData.MovieViewData) {
         titleLabel.text = viewData.title
         releaseDateLabel.text = "Lançamento: \(viewData.releaseDate.formatDate())"
@@ -102,5 +97,6 @@ class MoviesTableViewCell: UITableViewCell {
         moviePoster.kf.indicatorType = .activity
         moviePoster.kf.setImage(with: url)
         moviePoster.contentMode = .scaleAspectFit
+        moviePoster.layer.cornerRadius = 18
     }
 }
